@@ -27,6 +27,8 @@ public class tester {
         commandqueue.add("delete");
         commandqueue.add("search K");
         commandqueue.add("move rights");
+        commandqueue.add("insert 1");
+        commandqueue.add("insert ab");
 
         for (String s: commandqueue) {
             WP.processCommand(s);

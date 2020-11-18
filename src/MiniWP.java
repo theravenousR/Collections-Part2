@@ -180,13 +180,18 @@ public class MiniWP implements MiniWPI {
     @Override
     public void processCommand(String s) {
         if (s.length() > 10) {
-            System.out.println("Please enter the command followed by a space followed by a character or direction (e.g. insert J)");
+            System.out.print("Please enter the command followed by a space followed by a character or direction (e.g. insert J, move left): ");
         }
         else if (s.equalsIgnoreCase("delete")) {
             this.delete();
         }
         else if (s.substring(0, 7).equalsIgnoreCase("insert ")) {
-            this.insertChar(s.charAt(7));
+            if (s.substring(7).length() == 1) {
+                this.insertChar(s.charAt(7));
+            }
+            else {
+                System.out.print("Enter a single character for insertion (e.g. insert a): ");
+            }
         }
         else if (s.substring(0, 5).equalsIgnoreCase("move ")) {
             if (s.substring(5).equalsIgnoreCase("left")) {
