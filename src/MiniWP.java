@@ -185,6 +185,12 @@ public class MiniWP implements MiniWPI {
         else if (s.equalsIgnoreCase("delete")) {
             this.delete();
         }
+        else if (s.equalsIgnoreCase("start")) {
+            this.moveToStart();
+        }
+        else if (s.equalsIgnoreCase("end")) {
+            this.moveToEnd();
+        }
         else if (s.substring(0, 7).equalsIgnoreCase("insert ")) {
             if (s.substring(7).length() == 1) {
                 this.insertChar(s.charAt(7));

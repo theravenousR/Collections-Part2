@@ -29,10 +29,15 @@ public class tester {
         commandqueue.add("move rights");
         commandqueue.add("insert 1");
         commandqueue.add("insert ab");
+        commandqueue.add("start");
+        commandqueue.add("end");
 
         for (String s: commandqueue) {
             WP.processCommand(s);
         }
+
+        System.out.println(WP.toString());
+        System.out.println(WP.toStringCursor());
 
     }
 }
